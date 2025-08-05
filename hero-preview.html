@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qwen-Image Hero Preview - 高大上首页效果</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f5f5f7;
+        }
+        .preview-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        .preview-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+        .preview-header h1 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+        }
+        .preview-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+        }
+        .comparison-item {
+            padding: 2rem;
+            text-align: center;
+        }
+        .comparison-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #1d1d1f;
+        }
+        .old-design {
+            background: #f8f9fa;
+            border-right: 1px solid #e9ecef;
+        }
+        .new-design {
+            background: #e8f5e8;
+        }
+        .preview-image {
+            width: 100%;
+            height: 300px;
+            background: #ddd;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: #666;
+            position: relative;
+            overflow: hidden;
+        }
+        .preview-image.new {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .feature-list {
+            text-align: left;
+            margin-top: 1rem;
+        }
+        .feature-list li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .feature-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: bold;
+        }
+        .new-design .feature-list li::before {
+            color: #007AFF;
+        }
+        .cta-button {
+            display: inline-block;
+            background: #007AFF;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 2rem;
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            background: #0056b3;
+            transform: translateY(-2px);
+        }
+        .features-showcase {
+            padding: 3rem 2rem;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        @media (max-width: 768px) {
+            .comparison {
+                grid-template-columns: 1fr;
+            }
+            .old-design {
+                border-right: none;
+                border-bottom: 1px solid #e9ecef;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="preview-container">
+        <div class="preview-header">
+            <h1>🚀 Qwen-Image 首页升级</h1>
+            <p>从普通设计到高大上的视觉震撼体验</p>
+        </div>
+
+        <div class="comparison">
+            <div class="comparison-item old-design">
+                <h3>❌ 优化前：普通设计</h3>
+                <div class="preview-image">
+                    <div>
+                        <div style="font-size: 2rem; margin-bottom: 1rem;">简单渐变背景</div>
+                        <div style="font-size: 1rem; opacity: 0.7;">基础的英雄区域设计</div>
+                    </div>
+                </div>
+                <ul class="feature-list">
+                    <li>简单的渐变背景</li>
+                    <li>基础的文字布局</li>
+                    <li>普通的按钮设计</li>
+                    <li>静态的内容展示</li>
+                    <li>缺乏视觉冲击力</li>
+                </ul>
+            </div>
+
+            <div class="comparison-item new-design">
+                <h3>✅ 优化后：高大上设计</h3>
+                <div class="preview-image new">
+                    <div style="text-align: center;">
+                        <div style="background: rgba(255,255,255,0.1); padding: 0.5rem 1rem; border-radius: 20px; margin-bottom: 1rem; font-size: 0.9rem;">🚀 New Release Qwen-Image v1.0</div>
+                        <div style="font-size: 3rem; font-weight: 900; margin-bottom: 0.5rem;">Qwen-Image</div>
+                        <div style="font-size: 1.5rem; margin-bottom: 1rem;">Revolutionary AI</div>
+                        <div style="display: flex; gap: 1rem; justify-content: center; margin-bottom: 1rem;">
+                            <div style="background: rgba(255,255,255,0.1); padding: 0.5rem 1rem; border-radius: 10px; font-size: 0.8rem;">20B</div>
+                            <div style="background: rgba(255,255,255,0.1); padding: 0.5rem 1rem; border-radius: 10px; font-size: 0.8rem;">94/100</div>
+                        </div>
+                        <div style="font-size: 0.8rem; opacity: 0.8;">Scroll to explore ↓</div>
+                    </div>
+                </div>
+                <ul class="feature-list">
+                    <li>全屏大图背景</li>
+                    <li>动态视差效果</li>
+                    <li>浮动卡片元素</li>
+                    <li>统计数据展示</li>
+                    <li>滚动指示器</li>
+                    <li>高级按钮设计</li>
+                    <li>移动端优化</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="features-showcase">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 1rem;">🎨 新设计特色</h2>
+            <p style="text-align: center; font-size: 1.2rem; color: #666; margin-bottom: 2rem;">
+                参考 Spaceship 等顶级网站的设计理念，打造视觉震撼的用户体验
+            </p>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🖼️</div>
+                    <h3>全屏大图背景</h3>
+                    <p>使用您的精美 AI 生成图片作为全屏背景，立即抓住用户眼球</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">✨</div>
+                    <h3>视差滚动效果</h3>
+                    <p>背景图片和浮动元素的视差滚动，营造立体感和动态体验</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>数据统计展示</h3>
+                    <p>直观展示 20B 参数、94/100 SEO评分等关键数据</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>高级按钮设计</h3>
+                    <p>带图标和箭头的大型按钮，增强交互体验和转化率</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">💫</div>
+                    <h3>浮动卡片元素</h3>
+                    <p>动态浮动的功能卡片，增加页面层次感和趣味性</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>完美移动适配</h3>
+                    <p>针对移动端特别优化，保证在所有设备上的完美体验</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="index.html" class="cta-button">🌐 查看新版网站</a>
+                <a href="seo-analyzer.html" class="cta-button" style="background: #28a745; margin-left: 1rem;">📊 SEO分析报告</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add some interactive effects
+        document.querySelectorAll('.feature-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+                this.style.boxShadow = '0 15px 30px rgba(0,0,0,0.15)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+                this.style.boxShadow = '0 5px 15px rgba(0,0,0,0.1)';
+            });
+        });
+
+        // Animate feature cards on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.feature-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'all 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>

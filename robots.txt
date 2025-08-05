@@ -1,0 +1,46 @@
+# Robots.txt for QwenImage.world
+# Optimized for search engine crawling
+
+User-agent: *
+Allow: /
+
+# Prioritize important pages
+Allow: /index.html
+Allow: /styles.css
+Allow: /script.js
+Allow: /images/
+
+# Block unnecessary files
+Disallow: /deploy.bat
+Disallow: /*.log
+Disallow: /temp/
+Disallow: /cache/
+
+# Sitemap location
+Sitemap: https://qwenimage.world/sitemap.xml
+
+# Crawl delay for respectful crawling
+Crawl-delay: 1
+
+# Special rules for different bots
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 2
+
+# Social media bots
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
