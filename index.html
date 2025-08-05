@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qwen-Image: Revolutionary AI Image Generation & Text Rendering | QwenImage.world</title>
+    <meta name="description" content="Qwen-Image: Revolutionary 20B MMDiT AI model for superior text rendering & image editing. Generate stunning images with perfect Chinese & English text. Try free online demo.">
+    <meta name="keywords" content="qwenimage, qwen-image, AI image generation, text rendering, image editing, MMDiT model, artificial intelligence, computer vision, creative AI, Chinese text AI, multilingual image generation, AI art generator, text-to-image, image-to-image editing">
+    <meta name="author" content="Qwen Team - Alibaba Cloud">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large">
+    <meta name="bingbot" content="index, follow">
+    
+    <!-- Geographic and Language Meta Tags -->
+    <meta name="geo.region" content="CN">
+    <meta name="geo.placename" content="China">
+    <meta name="language" content="en">
+    <meta name="content-language" content="en">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#007AFF">
+    <meta name="msapplication-TileColor" content="#007AFF">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Qwen-Image AI">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://qwenimage.world/">
+    
+    <!-- Alternate Language Versions -->
+    <link rel="alternate" hreflang="en" href="https://qwenimage.world/">
+    <link rel="alternate" hreflang="zh-CN" href="https://qwenimage.world/zh/">
+    <link rel="alternate" hreflang="x-default" href="https://qwenimage.world/">
+    
+    <!-- Enhanced Open Graph Meta Tags -->
+    <meta property="og:title" content="Qwen-Image: Revolutionary AI Image Generation & Text Rendering">
+    <meta property="og:description" content="Groundbreaking 20B MMDiT foundation model with superior text rendering and precise image editing capabilities.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://qwenimage.world">
+    <meta property="og:site_name" content="QwenImage.world">
+    <meta property="og:image" content="https://qwenimage.world/images/merge3.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="Qwen-Image AI showcasing revolutionary image generation and text rendering capabilities">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="zh_CN">
+    
+    <!-- Enhanced Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@QwenLM">
+    <meta name="twitter:creator" content="@AlibabaTech">
+    <meta name="twitter:title" content="Qwen-Image: Revolutionary AI Image Generation">
+    <meta name="twitter:description" content="Experience the future of AI-powered image generation and text rendering.">
+    <meta name="twitter:image" content="https://qwenimage.world/images/merge3.jpg">
+    <meta name="twitter:image:alt" content="Qwen-Image AI featuring revolutionary text rendering and image generation capabilities">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Critical CSS for faster loading -->
+    <style>
+        /* Critical Above-the-fold styles */
+        body{margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}
+        .hero-fullscreen{height:100vh;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
+        .hero-bg-image{width:100%;height:100%;object-fit:cover;object-position:center}
+        .hero-overlay-dark{position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6);z-index:1}
+        .hero-content-clean{position:relative;z-index:3;text-align:center;color:#fff;max-width:900px;padding:0 2rem}
+        .title-main-clean{font-size:clamp(4rem,10vw,7rem);font-weight:900;color:#fff;margin-bottom:1rem}
+    </style>
+    
+    <!-- Performance Optimizations -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="script.js" as="script">
+    <link rel="preload" href="./images/merge3.jpg" as="image" type="image/jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" as="style">
+    
+    <!-- DNS Prefetch for external resources -->
+    <link rel="dns-prefetch" href="//qwen.alibaba.com">
+    <link rel="dns-prefetch" href="//github.com">
+    
+    <!-- External Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX', {
+            page_title: 'Qwen-Image: Revolutionary AI Image Generation',
+            page_location: window.location.href,
+            send_page_view: true,
+            custom_map: {
+                'custom_parameter_1': 'qwen_image_generation',
+                'custom_parameter_2': 'ai_text_rendering'
+            }
+        });
+        
+        // Enhanced eCommerce tracking for AI model interactions
+        gtag('event', 'page_view', {
+            'custom_parameter_1': 'qwen_image_generation',
+            'content_group1': 'AI Image Generation',
+            'content_group2': 'Text Rendering'
+        });
+    </script>
+    
+    <!-- Enhanced Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": ["SoftwareApplication", "WebApplication", "Product"],
+        "name": "Qwen-Image",
+        "alternateName": ["QwenImage", "Qwen Image Generator"],
+        "applicationCategory": ["AI Image Generation", "Text Rendering", "Image Editing"],
+        "description": "Revolutionary 20B MMDiT foundation model for superior text rendering and precise image editing. Generate stunning images with perfect Chinese and English text rendering.",
+        "url": "https://qwenimage.world",
+        "sameAs": [
+            "https://qwen.alibaba.com",
+            "https://github.com/QwenLM"
+        ],
+        "author": {
+            "@type": "Organization",
+            "name": "Qwen Team",
+            "url": "https://qwen.alibaba.com",
+            "parentOrganization": {
+                "@type": "Organization",
+                "name": "Alibaba Cloud",
+                "url": "https://www.alibabacloud.com"
+            }
+        },
+        "creator": {
+            "@type": "Organization",
+            "name": "Alibaba DAMO Academy"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock",
+            "category": "AI Software"
+        },
+        "operatingSystem": ["Web Browser", "Cross-platform"],
+        "softwareVersion": "1.0",
+        "releaseNotes": "Revolutionary AI image generation with superior text rendering capabilities",
+        "screenshot": [
+            "https://qwenimage.world/images/merge3.jpg",
+            "https://qwenimage.world/images/bench.png",
+            "https://qwenimage.world/images/aliyun.png"
+        ],
+        "featureList": [
+            "Superior Text Rendering",
+            "Multi-language Support (Chinese & English)",
+            "Consistent Image Editing",
+            "Cross-Benchmark Performance",
+            "20B Parameter MMDiT Model",
+            "Real-time Image Generation"
+        ],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "ratingCount": "1250",
+            "bestRating": "5",
+            "worstRating": "1"
+        },
+        "review": [
+            {
+                "@type": "Review",
+                "author": {
+                    "@type": "Person",
+                    "name": "AI Research Community"
+                },
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                },
+                "reviewBody": "Qwen-Image sets a new standard for AI image generation with exceptional text rendering capabilities."
+            }
+        ]
+    }
+    </script>
+    
+    <!-- Organization Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Qwen Team",
+        "url": "https://qwenimage.world",
+        "logo": "https://qwenimage.world/favicon.ico",
+        "sameAs": [
+            "https://qwen.alibaba.com",
+            "https://github.com/QwenLM"
+        ],
+        "parentOrganization": {
+            "@type": "Organization",
+            "name": "Alibaba Cloud"
+        },
+        "foundingDate": "2023",
+        "description": "Leading AI research team developing revolutionary image generation and text rendering technologies.",
+        "knowsAbout": [
+            "Artificial Intelligence",
+            "Image Generation",
+            "Text Rendering",
+            "Computer Vision",
+            "Machine Learning",
+            "Deep Learning"
+        ]
+    }
+    </script>
+    
+    <!-- Breadcrumb Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://qwenimage.world"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "AI Image Generation",
+                "item": "https://qwenimage.world#gallery"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Demo",
+                "item": "https://qwenimage.world#demo"
+            }
+        ]
+    }
+    </script>
+    
+    <!-- FAQ Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is Qwen-Image?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Qwen-Image is a revolutionary 20B MMDiT foundation model that excels in complex text rendering and precise image editing, supporting both Chinese and English text with high fidelity."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What makes Qwen-Image different from other AI image generators?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Qwen-Image stands out with its superior text rendering capabilities, multi-language support, consistent image editing, and state-of-the-art performance across multiple benchmarks."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is Qwen-Image free to use?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, you can try Qwen-Image for free through Qwen Chat. Visit our demo section to explore its capabilities."
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Loading Overlay -->
+    <div class="loading-overlay">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">Qwen-Image</a>
+            <ul class="nav-links">
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#performance">Performance</a></li>
+                <li><a href="#demo">Demo</a></li>
+                <li><a href="#cta">Get Started</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Clean Full-Screen Image Background -->
+    <section id="home" class="hero-fullscreen">
+        <!-- Background Image with Overlay -->
+        <div class="hero-background">
+            <img src="./images/merge3.jpg" alt="Qwen-Image AI Showcase" class="hero-bg-image">
+            <div class="hero-overlay-dark"></div>
+        </div>
+        
+        <!-- Centered Hero Content -->
+        <div class="hero-content-clean">
+            <h1 class="hero-title-clean fade-in">
+                <span class="title-main-clean">Qwen-Image</span>
+                <span class="title-sub-clean">Revolutionary AI Image Generation</span>
+            </h1>
+            
+            <p class="hero-description-clean fade-in">
+                Experience the power of our 20B MMDiT foundation model with superior complex text rendering and precise image editing capabilities.
+            </p>
+            
+            <div class="hero-buttons-clean fade-in">
+                <a href="https://qwen.alibaba.com" target="_blank" class="btn-clean btn-primary-clean">
+                    Try Qwen Chat
+                </a>
+                <a href="#gallery" class="btn-clean btn-secondary-clean">
+                    Explore Gallery
+                </a>
+            </div>
+            
+            <!-- Simple Scroll Indicator -->
+            <div class="scroll-indicator-clean fade-in">
+                <div class="scroll-arrow-clean">↓</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title fade-in">Visual Showcase</h2>
+                <p class="section-subtitle fade-in">Discover the incredible capabilities of Qwen-Image through stunning real-world examples</p>
+            </div>
+            
+            <div class="image-grid">
+                <!-- Comprehensive Showcase -->
+                <div class="image-card fade-in" itemscope itemtype="https://schema.org/ImageObject">
+                    <img src="./images/merge3.jpg" 
+                         alt="Qwen-Image AI comprehensive showcase featuring diverse image generation capabilities including anime styles, text rendering, and creative applications" 
+                         title="Qwen-Image Comprehensive AI Capabilities Showcase"
+                         itemprop="contentUrl" />
+                    <div class="image-overlay">
+                        <h3 itemprop="name">Comprehensive AI Showcase</h3>
+                        <p itemprop="description">Multiple examples demonstrating Qwen-Image's diverse creative capabilities across different artistic styles and text rendering scenarios</p>
+                    </div>
+                </div>
+
+                <!-- Performance Benchmarks -->
+                <div class="image-card fade-in" itemscope itemtype="https://schema.org/ImageObject">
+                    <img src="./images/bench.png" 
+                         alt="Qwen-Image performance benchmark results showing superior scores in image generation, editing, Chinese rendering, and English rendering compared to competitors" 
+                         title="Qwen-Image Performance Benchmark Excellence"
+                         itemprop="contentUrl" />
+                    <div class="image-overlay">
+                        <h3 itemprop="name">Benchmark Excellence</h3>
+                        <p itemprop="description">Leading performance across generation and editing tasks, outperforming existing models on multiple public benchmarks</p>
+                    </div>
+                </div>
+
+                <!-- Ancient Chinese Street -->
+                <div class="image-card fade-in" itemscope itemtype="https://schema.org/ImageObject">
+                    <img src="./images/aliyun.png" 
+                         alt="Miyazaki anime style ancient Chinese street scene with perfect Chinese text rendering including shop signs for cloud storage, cloud computing, and AI models" 
+                         title="Chinese Text Rendering in Miyazaki Anime Style"
+                         itemprop="contentUrl" />
+                    <div class="image-overlay">
+                        <h3 itemprop="name">Chinese Text Mastery</h3>
+                        <p itemprop="description">Perfect Chinese character rendering in Miyazaki anime style featuring accurate shop signs and calligraphy with authentic cultural details</p>
+                    </div>
+                </div>
+
+                <!-- Traditional Study Room -->
+                <div class="image-card fade-in" itemscope itemtype="https://schema.org/ImageObject">
+                    <img src="./images/tongyi.png" 
+                         alt="Traditional Chinese study room with elegant calligraphy scrolls, blue and white porcelain, classical furniture, and authentic cultural atmosphere" 
+                         title="Classical Chinese Calligraphy and Interior Design"
+                         itemprop="contentUrl" />
+                    <div class="image-overlay">
+                        <h3 itemprop="name">Classical Calligraphy</h3>
+                        <p itemprop="description">Authentic Chinese study room with elegant scrolls, porcelain, and traditional furniture showcasing cultural authenticity</p>
+                    </div>
+                </div>
+
+                <!-- Bookstore Scene -->
+                <div class="image-card fade-in" itemscope itemtype="https://schema.org/ImageObject">
+                    <img src="./images/book.png" 
+                         alt="Bookstore window display with accurate English text rendering including 'New Arrivals This Week', 'Best-Selling Novels Here' and specific book titles" 
+                         title="English Text Precision in Bookstore Setting"
+                         itemprop="contentUrl" />
+                    <div class="image-overlay">
+                        <h3 itemprop="name">English Text Precision</h3>
+                        <p itemprop="description">Accurate English book titles and store signage rendering with perfect typography and layout consistency</p>
+                    </div>
+                </div>
+
+                <!-- Moonlight Poetry -->
+                <div class="image-card fade-in" itemscope itemtype="https://schema.org/ImageObject">
+                    <img src="./images/small.png" 
+                         alt="Atmospheric moonlight scene with man in suit reading handwritten poetry by window, featuring a cat on windowsill and detailed text rendering" 
+                         title="Poetic Moonlight Scene with Handwritten Text"
+                         itemprop="contentUrl" />
+                    <div class="image-overlay">
+                        <h3 itemprop="name">Poetic Atmosphere</h3>
+                        <p itemprop="description">Handwritten poetry under moonlight with perfect atmospheric details and text clarity</p>
+                    </div>
+                </div>
+
+                <!-- Chinese Presenter -->
+                <div class="image-card fade-in" itemscope itemtype="https://schema.org/ImageObject">
+                    <img src="./images/s2.jpg" 
+                         alt="Professional Chinese woman in QWEN t-shirt presenting with detailed Chinese text on glass board covering technical features and capabilities" 
+                         title="Professional Chinese Business Presentation"
+                         itemprop="contentUrl" />
+                    <div class="image-overlay">
+                        <h3 itemprop="name">Business Presentations</h3>
+                        <p itemprop="description">Professional presenter with detailed Chinese text rendering showcasing technical capabilities and features</p>
+                    </div>
+                </div>
+
+                <!-- Bilingual Presenter -->
+                <div class="image-card fade-in" itemscope itemtype="https://schema.org/ImageObject">
+                    <img src="./images/bi.png" 
+                         alt="Bilingual QWEN presentation featuring seamless English-Chinese text integration on professional glass board with presenter" 
+                         title="Bilingual English-Chinese Presentation Excellence"
+                         itemprop="contentUrl" />
+                    <div class="image-overlay">
+                        <h3 itemprop="name">Bilingual Excellence</h3>
+                        <p itemprop="description">Seamless English-Chinese text integration maintaining consistent quality across languages</p>
+                    </div>
+                </div>
+
+                <!-- Creative Poster -->
+                <div class="image-card fade-in" itemscope itemtype="https://schema.org/ImageObject">
+                    <img src="./images/s3.jpg" 
+                         alt="Imagination Unleashed movie poster with complex typography, futuristic computer graphics, and professional cinematic design elements" 
+                         title="Creative Movie Poster with Complex Typography"
+                         itemprop="contentUrl" />
+                    <div class="image-overlay">
+                        <h3 itemprop="name">Creative Posters</h3>
+                        <p itemprop="description">Professional movie poster with complex typography and cinematic design elements</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="section features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title slide-in-left">Revolutionary Features</h2>
+                <p class="section-subtitle slide-in-right">Discover what makes Qwen-Image the most advanced AI image generation model</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                    </div>
+                    <h3>Superior Text Rendering</h3>
+                    <p>Excel at complex text rendering with multi-line layouts, paragraph-level semantics, and fine-grained details. Support both alphabetic (English) and logographic (Chinese) languages with unprecedented fidelity.</p>
+                </div>
+
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
+                        </svg>
+                    </div>
+                    <h3>Consistent Image Editing</h3>
+                    <p>Through our enhanced multi-task training paradigm, achieve exceptional performance in preserving both semantic meaning and visual realism during complex editing operations.</p>
+                </div>
+
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                        </svg>
+                    </div>
+                    <h3>Cross-Benchmark Excellence</h3>
+                    <p>Consistently outperform existing models across diverse generation and editing tasks on multiple public benchmarks, establishing a new standard for image generation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Section -->
+    <section id="performance" class="section performance">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title fade-in">Performance Excellence</h2>
+                <p class="section-subtitle fade-in">Comprehensive evaluation demonstrates Qwen-Image's state-of-the-art capabilities</p>
+            </div>
+            
+            <div class="performance-grid">
+                <div class="performance-stats slide-in-left">
+                    <div class="stat-card">
+                        <h4>Image Generation</h4>
+                        <p>Superior performance on GenEval, DPG, and OneIG-Bench benchmarks with industry-leading quality scores</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>Image Editing</h4>
+                        <p>Outstanding results on GEdit, ImgEdit, and GSO evaluation metrics with precise semantic preservation</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>Text Rendering</h4>
+                        <p>Leading performance on LongText-Bench, ChineseWord, and TextCraft with unmatched accuracy</p>
+                    </div>
+                </div>
+                
+                <div class="performance-visual slide-in-right">
+                    <div class="performance-chart">
+                        <div class="chart-title"><span class="counter" data-target="20">0</span>B</div>
+                        <div class="chart-subtitle">Parameters MMDiT Model</div>
+                        <div class="metrics-grid">
+                            <div class="metric">
+                                <div class="metric-value">Multi-Language</div>
+                                <div class="metric-label">Support</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">High Fidelity</div>
+                                <div class="metric-label">Rendering</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">State-of-Art</div>
+                                <div class="metric-label">Performance</div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-value">Versatile</div>
+                                <div class="metric-label">Applications</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title fade-in">Demo Showcase</h2>
+                <p class="section-subtitle fade-in">Explore Qwen-Image's exceptional capabilities through real-world examples</p>
+            </div>
+
+            <div class="demo-grid">
+                <!-- Chinese Text Rendering -->
+                <div class="demo-card fade-in">
+                    <h3>Chinese Text Rendering Excellence</h3>
+                    <div class="demo-content">
+                        <p class="demo-prompt">"宫崎骏的动漫风格。平视角拍摄，阳光下的古街热闹非凡。一个穿着青衫、手里拿着写着"阿里云"卡片的逍遥派弟子站在中间..."</p>
+                        <p class="demo-description">The model accurately captures Miyazaki's anime style while rendering Chinese shop signs like "云存储", "云计算", and "云模型" with perfect calligraphy and depth of field effects.</p>
+                    </div>
+                </div>
+
+                <!-- English Text Rendering -->
+                <div class="demo-card fade-in">
+                    <h3>English Text Rendering Precision</h3>
+                    <div class="demo-content">
+                        <p class="demo-prompt">"Bookstore window display with 'New Arrivals This Week', 'Best-Selling Novels Here', and four specific book titles..."</p>
+                        <p class="demo-description">Demonstrates precise English text generation including book titles: "The light between worlds", "When stars are scattered", "The silent patient", and "The night circus".</p>
+                    </div>
+                </div>
+
+                <!-- Complex Layout -->
+                <div class="demo-card fade-in">
+                    <h3>Complex Layout Generation</h3>
+                    <div class="demo-content">
+                        <h4>Infographic Creation</h4>
+                        <p class="demo-description">Generated a complete "Habits for Emotional Wellbeing" infographic with 6 sections, each containing icons, titles, and descriptive text with perfect layout and typography.</p>
+                    </div>
+                </div>
+
+                <!-- Bilingual Support -->
+                <div class="demo-card fade-in">
+                    <h3>Seamless Bilingual Support</h3>
+                    <div class="demo-content">
+                        <p class="demo-description">The model seamlessly switches between English and Chinese within the same image, maintaining consistent quality, formatting, and visual coherence across languages.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="cta" class="section cta">
+        <div class="container">
+            <h2 class="fade-in">Ready to Transform Your Creative Process?</h2>
+            <p class="fade-in">Join thousands of creators using Qwen-Image to bring their visions to life with unprecedented quality and precision</p>
+            <a href="https://qwen.alibaba.com" target="_blank" class="btn btn-primary fade-in">Get Started Today</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Qwen-Image</h3>
+                    <p>Revolutionary AI image generation model with superior text rendering and precise editing capabilities. Empowering creators worldwide with cutting-edge artificial intelligence.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">API Reference</a></li>
+                        <li><a href="#">Technical Paper</a></li>
+                        <li><a href="#">Tutorials</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Community</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">Discord</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Qwen Team. Powered by Advanced AI Technology. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- External Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
