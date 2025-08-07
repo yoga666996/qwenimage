@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Qwen-Image: Revolutionary AI Image Generation & Text Rendering | QwenImage.world</title>
-    <meta name="description" content="Qwen-Image: Revolutionary 20B MMDiT AI model for superior text rendering & image editing. Generate stunning images with perfect Chinese & English text. Try free online demo.">
-    <meta name="keywords" content="qwenimage, qwen-image, AI image generation, text rendering, image editing, MMDiT model, artificial intelligence, computer vision, creative AI, Chinese text AI, multilingual image generation, AI art generator, text-to-image, image-to-image editing">
+    <meta name="description" content="Qwen-Image WAN2.2: Revolutionary 20B MMDiT AI model with ComfyUI integration & GGUF format support. Qwen-Image excels in superior text rendering & precise image editing for Chinese & English text. Download qwen image gguf models, explore qwen image comfyui workflows, and experience wan2.2 qwen-image capabilities now.">
+    <meta name="keywords" content="qwenimage, qwen-image, qwen image comfyui, wan2.2, qwen image gguf, AI image generation, text rendering, image editing, MMDiT model, artificial intelligence, computer vision, creative AI, Chinese text AI, multilingual image generation, AI art generator, text-to-image, image-to-image editing, comfyui integration, gguf model format, qwen wan2.2 release">
     <meta name="author" content="Qwen Team - Alibaba Cloud">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large">
@@ -61,18 +61,36 @@
     <!-- Critical CSS for faster loading -->
     <style>
         /* Critical Above-the-fold styles */
-        body{margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}
+        *{box-sizing:border-box}
+        body{margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;line-height:1.6}
         .hero-fullscreen{height:100vh;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
-        .hero-bg-image{width:100%;height:100%;object-fit:cover;object-position:center}
-        .hero-overlay-dark{position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6);z-index:1}
-        .hero-content-clean{position:relative;z-index:3;text-align:center;color:#fff;max-width:900px;padding:0 2rem}
-        .title-main-clean{font-size:clamp(4rem,10vw,7rem);font-weight:900;color:#fff;margin-bottom:1rem}
+        .hero-background{position:absolute;top:0;left:0;width:100%;height:100%;z-index:0}
+        .hero-bg-image{width:100%;height:100%;object-fit:cover;object-position:center;filter:brightness(0.8) saturate(1.4);transition:all 0.8s ease;transform:scale(1.05)}
+        .hero-overlay-dark{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,rgba(102,126,234,0.7) 0%,rgba(118,75,162,0.6) 25%,rgba(255,94,77,0.5) 50%,rgba(240,147,251,0.6) 75%,rgba(102,126,234,0.7) 100%);background-size:400% 400%;z-index:1}
+        .hero-content-clean{position:relative;z-index:3;text-align:center;color:#fff;max-width:900px;padding:0 2rem;display:flex;flex-direction:column;align-items:center;justify-content:center}
+        .title-main-clean{display:block;font-size:clamp(4rem,10vw,7rem);font-weight:900;color:#fff;margin-bottom:1rem;text-shadow:0 4px 12px rgba(0,0,0,0.5);letter-spacing:-1px}
+        .title-sub-clean{display:block;font-size:clamp(1.5rem,4vw,2.2rem);font-weight:600;color:rgba(255,255,255,0.9);text-shadow:0 2px 6px rgba(0,0,0,0.5)}
+        .hero-description-clean{font-size:clamp(1.1rem,2vw,1.5rem);line-height:1.6;margin:2rem 0 3rem;color:#fff;max-width:800px;text-shadow:0 2px 4px rgba(0,0,0,0.5)}
+        .hero-buttons-clean{display:flex;gap:2rem;justify-content:center;margin-bottom:4rem}
+        .btn-clean{padding:1.2rem 3rem;border-radius:4px;font-size:1.1rem;font-weight:600;text-decoration:none;transition:all 0.3s ease;letter-spacing:0.5px}
+        .btn-primary-clean{background:#fff;color:#1D1D1F;box-shadow:0 4px 15px rgba(0,0,0,0.2)}
+        .btn-secondary-clean{background:transparent;color:#fff;border:2px solid #fff}
+        .navbar{position:fixed;top:0;width:100%;background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);z-index:1000;transition:all 0.3s ease}
+        .nav-container{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem}
+        .logo{font-size:1.5rem;font-weight:900;color:#007AFF;text-decoration:none}
+        .nav-links{display:flex;list-style:none;margin:0;padding:0;gap:2rem}
+        .nav-links a{text-decoration:none;color:#333;font-weight:500;transition:color 0.3s ease}
+        @media(max-width:768px){
+            .hero-buttons-clean{flex-direction:column;align-items:center;gap:1rem}
+            .btn-clean{width:100%;max-width:280px;text-align:center}
+            .nav-links{display:none}
+        }
     </style>
     
     <!-- Performance Optimizations -->
     <link rel="preload" href="styles.css" as="style">
     <link rel="preload" href="script.js" as="script">
-    <link rel="preload" href="./merge3.jpg" as="image" type="image/jpeg">
+    <link rel="preload" href="./images/merge3.jpg" as="image" type="image/jpeg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" as="style">
@@ -81,31 +99,39 @@
     <link rel="dns-prefetch" href="//qwen.alibaba.com">
     <link rel="dns-prefetch" href="//github.com">
     
-    <!-- External Stylesheets -->
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- External Stylesheets - Async loading -->
+    <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="styles.css"></noscript>
     
-    <!-- Google Analytics (GA4) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <!-- Fonts - Optimized loading -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap" rel="stylesheet"></noscript>
+    
+    <!-- Google tag (gtag.js) - Real GA4 Configuration -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4802VTNWYH"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX', {
-            page_title: 'Qwen-Image: Revolutionary AI Image Generation',
+        
+        gtag('config', 'G-4802VTNWYH', {
+            page_title: 'Qwen-Image: Revolutionary AI Image Generation & Text Rendering',
             page_location: window.location.href,
             send_page_view: true,
             custom_map: {
-                'custom_parameter_1': 'qwen_image_generation',
-                'custom_parameter_2': 'ai_text_rendering'
+                'custom_parameter_1': 'qwen_image_comfyui',
+                'custom_parameter_2': 'qwen_image_gguf',
+                'custom_parameter_3': 'wan22_text_rendering'
             }
         });
         
-        // Enhanced eCommerce tracking for AI model interactions
+        // Enhanced tracking for Qwen-Image interactions
         gtag('event', 'page_view', {
-            'custom_parameter_1': 'qwen_image_generation',
-            'content_group1': 'AI Image Generation',
-            'content_group2': 'Text Rendering'
+            'custom_parameter_1': 'qwen_image_comfyui',
+            'custom_parameter_2': 'qwen_image_gguf',
+            'content_group1': 'Qwen-Image AI Generation',
+            'content_group2': 'ComfyUI Integration',
+            'content_group3': 'WAN2.2 Text Rendering'
         });
     </script>
     
@@ -291,7 +317,9 @@
                 <li><a href="#features">Features</a></li>
                 <li><a href="#performance">Performance</a></li>
                 <li><a href="#demo">Demo</a></li>
-                <li><a href="#cta">Get Started</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="help.html">Help</a></li>
+                <li><a href="blog.html">Blog</a></li>
             </ul>
         </div>
     </nav>
@@ -300,8 +328,22 @@
     <section id="home" class="hero-fullscreen">
         <!-- Background Image with Overlay -->
         <div class="hero-background">
-            <img src="./merge3.jpg" alt="Qwen-Image AI Showcase" class="hero-bg-image">
+            <img src="./images/merge3.jpg" alt="Qwen-Image AI Showcase" class="hero-bg-image">
             <div class="hero-overlay-dark"></div>
+        </div>
+        
+        <!-- Floating Particles Animation -->
+        <div class="particles-container">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
         </div>
         
         <!-- Centered Hero Content -->
@@ -312,7 +354,7 @@
             </h1>
             
             <p class="hero-description-clean fade-in">
-                Experience the power of our 20B MMDiT foundation model with superior complex text rendering and precise image editing capabilities.
+                Experience Qwen-Image WAN2.2 with advanced ComfyUI integration and optimized GGUF format support. Our revolutionary 20B MMDiT qwen-image foundation model delivers superior complex text rendering and precise image editing capabilities for professional AI workflows. Qwen-Image ComfyUI workflows enable seamless qwen image gguf model deployment with enhanced wan2.2 performance.
             </p>
             
             <div class="hero-buttons-clean fade-in">
@@ -335,26 +377,26 @@
     <section id="gallery" class="section gallery">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title fade-in">Visual Showcase</h2>
-                <p class="section-subtitle fade-in">Discover the incredible capabilities of Qwen-Image through stunning real-world examples</p>
+                <h2 class="section-title fade-in">Qwen-Image Visual Showcase</h2>
+                <p class="section-subtitle fade-in">Discover the incredible capabilities of Qwen-Image through stunning real-world examples. Experience qwen image comfyui workflows, wan2.2 text rendering excellence, and qwen image gguf model performance optimization.</p>
             </div>
             
             <div class="image-grid">
                 <!-- Comprehensive Showcase -->
                 <div class="image-card fade-in" itemscope itemtype="https://schema.org/ImageObject">
-                    <img src="./merge3.jpg" 
-                         alt="Qwen-Image AI comprehensive showcase featuring diverse image generation capabilities including anime styles, text rendering, and creative applications" 
+                    <img src="./images/merge3.jpg" 
+                         alt="Qwen-Image AI comprehensive showcase featuring diverse qwen image comfyui capabilities including anime styles, wan2.2 text rendering, and qwen image gguf creative applications" 
                          title="Qwen-Image Comprehensive AI Capabilities Showcase"
                          itemprop="contentUrl" />
                     <div class="image-overlay">
                         <h3 itemprop="name">Comprehensive AI Showcase</h3>
-                        <p itemprop="description">Multiple examples demonstrating Qwen-Image's diverse creative capabilities across different artistic styles and text rendering scenarios</p>
+                        <p itemprop="description">Multiple examples demonstrating Qwen-Image's diverse creative capabilities across different artistic styles. Featuring qwen image comfyui workflows, wan2.2 text rendering scenarios, and qwen image gguf optimization.</p>
                     </div>
                 </div>
 
                 <!-- Performance Benchmarks -->
                 <div class="image-card fade-in" itemscope itemtype="https://schema.org/ImageObject">
-                    <img src="./bench.png" 
+                    <img src="./images/bench.png" 
                          alt="Qwen-Image performance benchmark results showing superior scores in image generation, editing, Chinese rendering, and English rendering compared to competitors" 
                          title="Qwen-Image Performance Benchmark Excellence"
                          itemprop="contentUrl" />
@@ -366,7 +408,7 @@
 
                 <!-- Ancient Chinese Street -->
                 <div class="image-card fade-in" itemscope itemtype="https://schema.org/ImageObject">
-                    <img src="./aliyun.png" 
+                    <img src="./images/aliyun.png" 
                          alt="Miyazaki anime style ancient Chinese street scene with perfect Chinese text rendering including shop signs for cloud storage, cloud computing, and AI models" 
                          title="Chinese Text Rendering in Miyazaki Anime Style"
                          itemprop="contentUrl" />
@@ -378,7 +420,7 @@
 
                 <!-- Traditional Study Room -->
                 <div class="image-card fade-in" itemscope itemtype="https://schema.org/ImageObject">
-                    <img src="./tongyi.png" 
+                    <img src="./images/tongyi.png" 
                          alt="Traditional Chinese study room with elegant calligraphy scrolls, blue and white porcelain, classical furniture, and authentic cultural atmosphere" 
                          title="Classical Chinese Calligraphy and Interior Design"
                          itemprop="contentUrl" />
@@ -390,7 +432,7 @@
 
                 <!-- Bookstore Scene -->
                 <div class="image-card fade-in" itemscope itemtype="https://schema.org/ImageObject">
-                    <img src="./book.png" 
+                    <img src="./images/book.png" 
                          alt="Bookstore window display with accurate English text rendering including 'New Arrivals This Week', 'Best-Selling Novels Here' and specific book titles" 
                          title="English Text Precision in Bookstore Setting"
                          itemprop="contentUrl" />
@@ -402,7 +444,7 @@
 
                 <!-- Moonlight Poetry -->
                 <div class="image-card fade-in" itemscope itemtype="https://schema.org/ImageObject">
-                    <img src="./small.png" 
+                    <img src="./images/small.png" 
                          alt="Atmospheric moonlight scene with man in suit reading handwritten poetry by window, featuring a cat on windowsill and detailed text rendering" 
                          title="Poetic Moonlight Scene with Handwritten Text"
                          itemprop="contentUrl" />
@@ -414,7 +456,7 @@
 
                 <!-- Chinese Presenter -->
                 <div class="image-card fade-in" itemscope itemtype="https://schema.org/ImageObject">
-                    <img src="./s2.jpg" 
+                    <img src="./images/s2.jpg" 
                          alt="Professional Chinese woman in QWEN t-shirt presenting with detailed Chinese text on glass board covering technical features and capabilities" 
                          title="Professional Chinese Business Presentation"
                          itemprop="contentUrl" />
@@ -426,7 +468,7 @@
 
                 <!-- Bilingual Presenter -->
                 <div class="image-card fade-in" itemscope itemtype="https://schema.org/ImageObject">
-                    <img src="./bi.png" 
+                    <img src="./images/bi.png" 
                          alt="Bilingual QWEN presentation featuring seamless English-Chinese text integration on professional glass board with presenter" 
                          title="Bilingual English-Chinese Presentation Excellence"
                          itemprop="contentUrl" />
@@ -438,7 +480,7 @@
 
                 <!-- Creative Poster -->
                 <div class="image-card fade-in" itemscope itemtype="https://schema.org/ImageObject">
-                    <img src="./s3.jpg" 
+                    <img src="./images/s3.jpg" 
                          alt="Imagination Unleashed movie poster with complex typography, futuristic computer graphics, and professional cinematic design elements" 
                          title="Creative Movie Poster with Complex Typography"
                          itemprop="contentUrl" />
@@ -455,8 +497,8 @@
     <section id="features" class="section features">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title slide-in-left">Revolutionary Features</h2>
-                <p class="section-subtitle slide-in-right">Discover what makes Qwen-Image the most advanced AI image generation model</p>
+                <h2 class="section-title slide-in-left">Qwen-Image Revolutionary Features</h2>
+                <p class="section-subtitle slide-in-right">Discover what makes Qwen-Image the most advanced AI image generation model. From qwen image comfyui integration to wan2.2 enhanced text rendering and qwen image gguf optimization for superior performance.</p>
             </div>
             
             <div class="features-grid">
@@ -466,8 +508,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                         </svg>
                     </div>
-                    <h3>Superior Text Rendering</h3>
-                    <p>Excel at complex text rendering with multi-line layouts, paragraph-level semantics, and fine-grained details. Support both alphabetic (English) and logographic (Chinese) languages with unprecedented fidelity.</p>
+                    <h3>Qwen-Image Superior Text Rendering</h3>
+                    <p>Qwen-Image excels at complex text rendering with multi-line layouts, paragraph-level semantics, and fine-grained details. Our wan2.2 enhanced qwen image comfyui workflows support both alphabetic (English) and logographic (Chinese) languages with unprecedented fidelity using qwen image gguf optimization.</p>
                 </div>
 
                 <div class="feature-card fade-in">
@@ -476,8 +518,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
                         </svg>
                     </div>
-                    <h3>Consistent Image Editing</h3>
-                    <p>Through our enhanced multi-task training paradigm, achieve exceptional performance in preserving both semantic meaning and visual realism during complex editing operations.</p>
+                    <h3>Qwen-Image Consistent Editing</h3>
+                    <p>Through our enhanced multi-task training paradigm, Qwen-Image achieves exceptional performance in preserving both semantic meaning and visual realism during complex editing operations. Qwen image comfyui integration with wan2.2 ensures seamless qwen image gguf deployment.</p>
                 </div>
 
                 <div class="feature-card fade-in">
@@ -486,8 +528,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
                         </svg>
                     </div>
-                    <h3>Cross-Benchmark Excellence</h3>
-                    <p>Consistently outperform existing models across diverse generation and editing tasks on multiple public benchmarks, establishing a new standard for image generation.</p>
+                    <h3>Qwen-Image Cross-Benchmark Excellence</h3>
+                    <p>Qwen-Image consistently outperforms existing models across diverse generation and editing tasks on multiple public benchmarks. Our qwen image comfyui integration with wan2.2 enhancements and qwen image gguf optimization establishes a new standard for AI image generation.</p>
                 </div>
             </div>
         </div>
@@ -497,8 +539,8 @@
     <section id="performance" class="section performance">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title fade-in">Performance Excellence</h2>
-                <p class="section-subtitle fade-in">Comprehensive evaluation demonstrates Qwen-Image's state-of-the-art capabilities</p>
+                <h2 class="section-title fade-in">Qwen-Image Performance Excellence</h2>
+                <p class="section-subtitle fade-in">Comprehensive evaluation demonstrates Qwen-Image's state-of-the-art capabilities. Qwen-Image WAN2.2 with ComfyUI integration and GGUF format delivers exceptional qwen image performance benchmarks.</p>
             </div>
             
             <div class="performance-grid">
@@ -549,8 +591,8 @@
     <section id="demo" class="section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title fade-in">Demo Showcase</h2>
-                <p class="section-subtitle fade-in">Explore Qwen-Image's exceptional capabilities through real-world examples</p>
+                <h2 class="section-title fade-in">Qwen-Image Demo Showcase</h2>
+                <p class="section-subtitle fade-in">Explore Qwen-Image's exceptional capabilities through real-world examples. See qwen image comfyui workflows, wan2.2 text rendering demos, and qwen image gguf model applications in action.</p>
             </div>
 
             <div class="demo-grid">
@@ -612,28 +654,28 @@
                 <div class="footer-section">
                     <h3>Resources</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Documentation</a></li>
-                        <li><a href="#">API Reference</a></li>
-                        <li><a href="#">Technical Paper</a></li>
-                        <li><a href="#">Tutorials</a></li>
+                        <li><a href="help.html">Help Center</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="#">Qwen-Image API Reference</a></li>
+                        <li><a href="#">Qwen Image ComfyUI Integration</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3>Community</h3>
+                    <h3>Models</h3>
                     <ul class="footer-links">
-                        <li><a href="#">GitHub</a></li>
-                        <li><a href="#">Discord</a></li>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">Blog</a></li>
+                        <li><a href="#demo">Qwen Image GGUF Models</a></li>
+                        <li><a href="#features">Qwen WAN2.2 Features</a></li>
+                        <li><a href="#performance">Benchmarks</a></li>
+                        <li><a href="#">Download Qwen-Image</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h3>Company</h3>
                     <ul class="footer-links">
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Careers</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
                         <li><a href="#">Contact</a></li>
-                        <li><a href="#">Privacy</a></li>
                     </ul>
                 </div>
             </div>
@@ -643,7 +685,49 @@
         </div>
     </footer>
 
-    <!-- External Scripts -->
-    <script src="script.js"></script>
+    <!-- External Scripts - Deferred loading -->
+    <script defer src="script.js"></script>
+    
+    <!-- Performance monitoring -->
+    <script>
+        // Core Web Vitals monitoring
+        if ('web-vital' in window) {
+            // Monitor LCP, FID, CLS
+            webVitals.getLCP(console.log);
+            webVitals.getFID(console.log);
+            webVitals.getCLS(console.log);
+        }
+        
+        // Simple performance timing
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                if (performance.timing) {
+                    const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+                    console.log('Page load time:', loadTime + 'ms');
+                    
+                    // Send to analytics if needed
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'timing_complete', {
+                            'name': 'page_load',
+                            'value': loadTime
+                        });
+                    }
+                }
+            }, 1000);
+        });
+        
+        // Register Service Worker for caching
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => {
+                        console.log('Service Worker registered successfully');
+                    })
+                    .catch(error => {
+                        console.log('Service Worker registration failed:', error);
+                    });
+            });
+        }
+    </script>
 </body>
 </html>
