@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Center - Qwen-Image Support & Documentation | QwenImage.world</title>
+    <meta name="description" content="Get help with Qwen-Image WAN2.2, ComfyUI integration, GGUF model setup, and AI image generation. Comprehensive guides, tutorials, and troubleshooting for qwen image users.">
+    <meta name="keywords" content="qwen image help, qwen image comfyui tutorial, wan2.2 guide, qwen image gguf setup, AI image generation support, troubleshooting qwen image">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="canonical" href="https://qwenimage.world/help.html">
+    
+    <!-- FAQ structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How do I set up qwen image comfyui integration?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "To set up qwen image comfyui integration, download the ComfyUI nodes from our repository, install the required dependencies, and load the qwen image gguf models into your ComfyUI workflow."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What are qwen image gguf models?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Qwen image gguf models are optimized AI models in GGUF format that provide efficient inference for image generation across various hardware configurations."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What's new in WAN2.2?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "WAN2.2 introduces enhanced text rendering capabilities, improved image editing precision, and better support for multilingual content generation in qwen image."
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html">Qwen-Image</a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="help.html" class="active">Help</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+                <li><a href="terms.html">Terms</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="help-page">
+        <!-- Hero Section -->
+        <section class="help-hero">
+            <div class="container">
+                <div class="help-hero-content">
+                    <h1>Help Center</h1>
+                    <p class="hero-subtitle">Get support for Qwen-Image WAN2.2, ComfyUI integration, and GGUF model setup</p>
+                    <div class="search-box">
+                        <input type="text" placeholder="Search for help articles..." id="helpSearch">
+                        <button type="button">🔍</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Links -->
+        <section class="help-quick-links">
+            <div class="container">
+                <h2>Quick Help</h2>
+                <div class="quick-links-grid">
+                    <a href="#getting-started" class="quick-link-card">
+                        <div class="icon">🚀</div>
+                        <h3>Getting Started</h3>
+                        <p>Begin your qwen image journey</p>
+                    </a>
+                    <a href="#comfyui-setup" class="quick-link-card">
+                        <div class="icon">🔧</div>
+                        <h3>ComfyUI Setup</h3>
+                        <p>Integrate qwen image comfyui</p>
+                    </a>
+                    <a href="#gguf-models" class="quick-link-card">
+                        <div class="icon">📦</div>
+                        <h3>GGUF Models</h3>
+                        <p>Download and use qwen image gguf</p>
+                    </a>
+                    <a href="#wan22-features" class="quick-link-card">
+                        <div class="icon">⭐</div>
+                        <h3>WAN2.2 Features</h3>
+                        <p>Explore latest capabilities</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Getting Started -->
+        <section id="getting-started" class="help-section">
+            <div class="container">
+                <h2>Getting Started with Qwen-Image</h2>
+                <div class="help-content">
+                    <div class="help-article">
+                        <h3>🎯 First Steps</h3>
+                        <ol>
+                            <li><strong>Choose Your Platform:</strong> Decide between web interface, qwen image comfyui integration, or direct model usage</li>
+                            <li><strong>Download Models:</strong> Get the appropriate qwen image gguf models for your setup</li>
+                            <li><strong>System Requirements:</strong> Ensure your system meets minimum requirements for WAN2.2 features</li>
+                            <li><strong>Installation:</strong> Follow platform-specific installation guides</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="help-article">
+                        <h3>💡 Basic Usage</h3>
+                        <p>Qwen-Image WAN2.2 supports various input methods:</p>
+                        <ul>
+                            <li><strong>Text Prompts:</strong> Describe your desired image in natural language</li>
+                            <li><strong>Image Editing:</strong> Upload existing images for modification</li>
+                            <li><strong>Style Transfer:</strong> Apply artistic styles to your content</li>
+                            <li><strong>Text Rendering:</strong> Generate images with precise text overlay</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ComfyUI Integration -->
+        <section id="comfyui-setup" class="help-section">
+            <div class="container">
+                <h2>Qwen Image ComfyUI Integration</h2>
+                <div class="help-content">
+                    <div class="help-article">
+                        <h3>🔧 Installation Steps</h3>
+                        <div class="code-block">
+                            <pre><code># Clone the qwen image comfyui nodes
+git clone https://github.com/QwenLM/qwen-image-comfyui
+cd qwen-image-comfyui
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Copy nodes to ComfyUI custom_nodes directory
+cp -r nodes/ /path/to/ComfyUI/custom_nodes/qwen-image/</code></pre>
+                        </div>
+                        
+                        <h4>Configuration</h4>
+                        <ol>
+                            <li>Download qwen image gguf models to your ComfyUI models folder</li>
+                            <li>Restart ComfyUI to load new nodes</li>
+                            <li>Find Qwen-Image nodes in the node browser</li>
+                            <li>Connect nodes to create your AI image generation workflow</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="help-article">
+                        <h3>🎨 Workflow Examples</h3>
+                        <p>Popular qwen image comfyui workflows:</p>
+                        <ul>
+                            <li><strong>Text-to-Image:</strong> Basic image generation from prompts</li>
+                            <li><strong>Image-to-Image:</strong> Transform existing images</li>
+                            <li><strong>Inpainting:</strong> Fill or replace parts of images</li>
+                            <li><strong>Outpainting:</strong> Extend images beyond original boundaries</li>
+                            <li><strong>Style Transfer:</strong> Apply artistic styles with WAN2.2 precision</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GGUF Models -->
+        <section id="gguf-models" class="help-section">
+            <div class="container">
+                <h2>Qwen Image GGUF Models</h2>
+                <div class="help-content">
+                    <div class="help-article">
+                        <h3>📦 Available Models</h3>
+                        <div class="model-grid">
+                            <div class="model-card">
+                                <h4>qwen-image-20b-q4_0.gguf</h4>
+                                <p><strong>Size:</strong> 12.5 GB</p>
+                                <p><strong>Precision:</strong> 4-bit quantization</p>
+                                <p><strong>Use Case:</strong> Balanced performance and quality</p>
+                            </div>
+                            <div class="model-card">
+                                <h4>qwen-image-20b-q8_0.gguf</h4>
+                                <p><strong>Size:</strong> 22.1 GB</p>
+                                <p><strong>Precision:</strong> 8-bit quantization</p>
+                                <p><strong>Use Case:</strong> Maximum quality for professional use</p>
+                            </div>
+                            <div class="model-card">
+                                <h4>qwen-image-20b-f16.gguf</h4>
+                                <p><strong>Size:</strong> 40.2 GB</p>
+                                <p><strong>Precision:</strong> Full precision</p>
+                                <p><strong>Use Case:</strong> Research and development</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="help-article">
+                        <h3>⚙️ System Requirements</h3>
+                        <table class="requirements-table">
+                            <thead>
+                                <tr>
+                                    <th>Model</th>
+                                    <th>RAM</th>
+                                    <th>VRAM</th>
+                                    <th>Storage</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>qwen-image-gguf q4_0</td>
+                                    <td>16 GB</td>
+                                    <td>8 GB</td>
+                                    <td>15 GB</td>
+                                </tr>
+                                <tr>
+                                    <td>qwen-image-gguf q8_0</td>
+                                    <td>32 GB</td>
+                                    <td>12 GB</td>
+                                    <td>25 GB</td>
+                                </tr>
+                                <tr>
+                                    <td>qwen-image-gguf f16</td>
+                                    <td>64 GB</td>
+                                    <td>24 GB</td>
+                                    <td>45 GB</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WAN2.2 Features -->
+        <section id="wan22-features" class="help-section">
+            <div class="container">
+                <h2>WAN2.2 Features Guide</h2>
+                <div class="help-content">
+                    <div class="help-article">
+                        <h3>🆕 What's New in WAN2.2</h3>
+                        <div class="feature-grid">
+                            <div class="feature-card">
+                                <h4>Enhanced Text Rendering</h4>
+                                <p>Improved accuracy for complex text layouts, multi-line formatting, and fine-grained typography control in qwen image generation.</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>Multilingual Support</h4>
+                                <p>Better support for Chinese, English, and other languages with accurate character rendering and cultural context understanding.</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>Precision Editing</h4>
+                                <p>Advanced image editing capabilities with semantic understanding and realistic modification of existing content.</p>
+                            </div>
+                            <div class="feature-card">
+                                <h4>ComfyUI Optimization</h4>
+                                <p>Improved qwen image comfyui integration with faster processing and more intuitive workflow creation.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="help-faq">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3>How do I download qwen image gguf models?</h3>
+                        <p>Visit our official repository or use the direct download links provided in the documentation. Make sure to verify checksums for file integrity.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Can I use Qwen-Image commercially?</h3>
+                        <p>Yes, qwen image models support commercial usage under our licensing terms. Review our <a href="terms.html">Terms of Service</a> for specific guidelines.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>What's the difference between WAN2.2 and previous versions?</h3>
+                        <p>WAN2.2 offers significantly improved text rendering, better multilingual support, and enhanced qwen image comfyui integration compared to earlier releases.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>How do I troubleshoot ComfyUI integration issues?</h3>
+                        <p>Check node dependencies, verify qwen image gguf model paths, and ensure ComfyUI version compatibility. See our troubleshooting guide for detailed steps.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Can I fine-tune qwen image models?</h3>
+                        <p>Fine-tuning capabilities depend on your license tier and technical setup. Contact our support team for guidance on custom model training.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>What hardware do I need for optimal performance?</h3>
+                        <p>For best results with qwen image gguf models, we recommend modern GPUs with at least 12GB VRAM and sufficient system RAM based on model size.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Support -->
+        <section class="help-contact">
+            <div class="container">
+                <div class="contact-content">
+                    <h2>Still Need Help?</h2>
+                    <p>Our support team is ready to assist with qwen image comfyui setup, gguf model configuration, and WAN2.2 feature implementation.</p>
+                    <div class="contact-options">
+                        <div class="contact-option">
+                            <h3>📧 Email Support</h3>
+                            <p>support@qwenimage.world</p>
+                            <p>Response time: 24-48 hours</p>
+                        </div>
+                        <div class="contact-option">
+                            <h3>💬 Community Forum</h3>
+                            <p>Join our active community</p>
+                            <p>Get help from other users</p>
+                        </div>
+                        <div class="contact-option">
+                            <h3>📚 Documentation</h3>
+                            <p>Comprehensive guides</p>
+                            <p>API references and examples</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Qwen-Image</h4>
+                    <p>Get help with AI image generation, ComfyUI integration, and GGUF models</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#getting-started">Getting Started</a></li>
+                        <li><a href="#comfyui-setup">ComfyUI Setup</a></li>
+                        <li><a href="#gguf-models">GGUF Models</a></li>
+                        <li><a href="#wan22-features">WAN2.2 Features</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="terms.html">Terms</a></li>
+                        <li><a href="privacy.html">Privacy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Qwen-Image Help Center. Supporting AI creators worldwide.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

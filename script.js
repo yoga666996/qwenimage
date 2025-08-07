@@ -1,6 +1,61 @@
 // ===== QWEN-IMAGE PREMIUM JAVASCRIPT =====
 
+// Performance optimizations
+function initPerformanceOptimizations() {
+    // Lazy loading for images
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    if (img.dataset.src) {
+                        img.src = img.dataset.src;
+                        img.classList.remove('lazy-image');
+                        img.classList.add('loaded');
+                        observer.unobserve(img);
+                    }
+                }
+            });
+        }, {
+            rootMargin: '50px'
+        });
+
+        // Observe all lazy images
+        document.querySelectorAll('.lazy-image').forEach(img => {
+            imageObserver.observe(img);
+        });
+    } else {
+        // Fallback for older browsers
+        document.querySelectorAll('.lazy-image').forEach(img => {
+            if (img.dataset.src) {
+                img.src = img.dataset.src;
+            }
+        });
+    }
+
+    // Preload critical resources on idle
+    if ('requestIdleCallback' in window) {
+        requestIdleCallback(() => {
+            // Preload next page resources
+            const criticalLinks = [
+                'about.html',
+                'help.html',
+                'blog.html'
+            ];
+            
+            criticalLinks.forEach(link => {
+                const linkTag = document.createElement('link');
+                linkTag.rel = 'prefetch';
+                linkTag.href = link;
+                document.head.appendChild(linkTag);
+            });
+        });
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize performance optimizations first
+    initPerformanceOptimizations();
     
     // ===== LOADING ANIMATION =====
     const loadingOverlay = document.querySelector('.loading-overlay');
