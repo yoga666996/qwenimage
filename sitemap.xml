@@ -9,12 +9,12 @@
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <image:image>
-            <image:loc>https://qwenimage.world/images/merge3.jpg</image:loc>
+            <image:loc>https://qwenimage.world/merge3.jpg</image:loc>
             <image:title>Qwen-Image AI Capabilities Showcase</image:title>
             <image:caption>Comprehensive demonstration of Qwen-Image's diverse AI image generation capabilities</image:caption>
         </image:image>
         <image:image>
-            <image:loc>https://qwenimage.world/images/bench.png</image:loc>
+            <image:loc>https://qwenimage.world/bench.png</image:loc>
             <image:title>Qwen-Image Performance Benchmarks</image:title>
             <image:caption>State-of-the-art performance results across multiple AI benchmarks</image:caption>
         </image:image>
@@ -27,17 +27,17 @@
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
         <image:image>
-            <image:loc>https://qwenimage.world/images/aliyun.png</image:loc>
+            <image:loc>https://qwenimage.world/aliyun.png</image:loc>
             <image:title>Chinese Text Rendering in Miyazaki Style</image:title>
             <image:caption>Perfect Chinese character rendering in anime-style ancient street scene</image:caption>
         </image:image>
         <image:image>
-            <image:loc>https://qwenimage.world/images/tongyi.png</image:loc>
+            <image:loc>https://qwenimage.world/tongyi.png</image:loc>
             <image:title>Traditional Chinese Calligraphy Study Room</image:title>
             <image:caption>Authentic Chinese study room with elegant calligraphy scrolls</image:caption>
         </image:image>
         <image:image>
-            <image:loc>https://qwenimage.world/images/book.png</image:loc>
+            <image:loc>https://qwenimage.world/book.png</image:loc>
             <image:title>English Text Precision in Bookstore Scene</image:title>
             <image:caption>Accurate English book titles and store signage rendering</image:caption>
         </image:image>
