@@ -8,7 +8,10 @@ Allow: /
 Allow: /index.html
 Allow: /styles.css
 Allow: /script.js
-Allow: /images/
+Allow: /*.jpg
+Allow: /*.png
+Allow: /*.gif
+Allow: /*.webp
 
 # Block unnecessary files
 Disallow: /deploy.bat
