@@ -59,15 +59,21 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // ===== LOADING ANIMATION =====
     const loadingOverlay = document.querySelector('.loading-overlay');
-    
-    window.addEventListener('load', function() {
+    const hideLoadingOverlay = () => {
+        if (!loadingOverlay) return; // page may not have overlay
+        loadingOverlay.classList.add('hidden');
         setTimeout(() => {
-            loadingOverlay.classList.add('hidden');
-            setTimeout(() => {
-                loadingOverlay.style.display = 'none';
-            }, 500);
-        }, 1000);
+            loadingOverlay.style.display = 'none';
+        }, 500);
+    };
+
+    // Hide on window load (when all resources finished)
+    window.addEventListener('load', function() {
+        setTimeout(hideLoadingOverlay, 300); // snappier
     });
+
+    // Fallback: hide after DOM ready to avoid being blocked by 3rd‑party iframes
+    setTimeout(hideLoadingOverlay, 2500);
 
     // ===== NAVBAR SCROLL EFFECT =====
     const navbar = document.querySelector('.navbar');
