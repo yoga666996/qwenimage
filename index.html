@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Qwen-Image: Revolutionary AI Image Generation & Text Rendering | QwenImage.world</title>
-    <meta name="description" content="Qwen-Image WAN2.2: Revolutionary 20B MMDiT AI model with ComfyUI integration & GGUF format support. Qwen-Image excels in superior text rendering & precise image editing for Chinese & English text. Download qwen image gguf models, explore qwen image comfyui workflows, and experience wan2.2 qwen-image capabilities now.">
-    <meta name="keywords" content="qwenimage, qwen-image, qwen image comfyui, wan2.2, qwen image gguf, AI image generation, text rendering, image editing, MMDiT model, artificial intelligence, computer vision, creative AI, Chinese text AI, multilingual image generation, AI art generator, text-to-image, image-to-image editing, comfyui integration, gguf model format, qwen wan2.2 release">
+    <meta name="description" content="Qwen-Image WAN2.2 & Qwen 2.5: Revolutionary AI with ComfyUI & GGUF. Superior text rendering, precise editing, qwen 2.5 video imagenes generar, and how to use qwen to run agent for automated creative workflows.">
+    <meta name="keywords" content="qwen, qwen 2.5, qwen 2.5 video, qwen 2.5 video imagenes generar, use qwen to run agent, qwen agent, qwenimage, qwen-image, qwen image comfyui, wan2.2, qwen image gguf, AI image generation, text rendering, image editing, MMDiT model, artificial intelligence, computer vision, creative AI, multilingual image generation, AI art generator, text-to-image, image-to-image editing, comfyui integration, gguf model format, qwen wan2.2 release">
     <meta name="author" content="Qwen Team - Alibaba Cloud">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large">
@@ -38,7 +38,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://qwenimage.world">
     <meta property="og:site_name" content="QwenImage.world">
-    <meta property="og:image" content="/merge3.jpg">
+    <meta property="og:image" content="merge3.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:type" content="image/jpeg">
@@ -52,8 +52,9 @@
     <meta name="twitter:creator" content="@AlibabaTech">
     <meta name="twitter:title" content="Qwen-Image: Revolutionary AI Image Generation">
     <meta name="twitter:description" content="Experience the future of AI-powered image generation and text rendering.">
-    <meta name="twitter:image" content="/merge3.jpg">
+    <meta name="twitter:image" content="merge3.jpg">
     <meta name="twitter:image:alt" content="Qwen-Image AI featuring revolutionary text rendering and image generation capabilities">
+    <meta property="og:updated_time" content="2025-01-01T00:00:00Z">
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -80,6 +81,13 @@
         .logo{font-size:1.5rem;font-weight:900;color:#007AFF;text-decoration:none}
         .nav-links{display:flex;list-style:none;margin:0;padding:0;gap:2rem}
         .nav-links a{text-decoration:none;color:#333;font-weight:500;transition:color 0.3s ease}
+        /* UI polish */
+        .image-card{border-radius:14px;overflow:hidden;position:relative;box-shadow:0 12px 30px rgba(0,0,0,0.12);background:#fff}
+        .image-card img{display:block;width:100%;height:auto}
+        .image-overlay{position:absolute;left:0;right:0;bottom:0;padding:16px;background:linear-gradient(180deg,rgba(0,0,0,0) 0%, rgba(0,0,0,0.55) 100%);color:#fff}
+        .section-header{max-width:900px;margin:0 auto 24px;text-align:center}
+        .badge{display:inline-block;margin:.25rem .4rem;padding:.35rem .6rem;border-radius:999px;background:#eef4ff;color:#1d4ed8;font-weight:600;font-size:.85rem}
+        .chips{display:flex;flex-wrap:wrap;justify-content:center}
         @media(max-width:768px){
             .hero-buttons-clean{flex-direction:column;align-items:center;gap:1rem}
             .btn-clean{width:100%;max-width:280px;text-align:center}
@@ -90,7 +98,7 @@
     <!-- Performance Optimizations -->
     <link rel="preload" href="styles.css" as="style">
     <link rel="preload" href="script.js" as="script">
-    <link rel="preload" href="/merge3.jpg" as="image" type="image/jpeg">
+    <link rel="preload" href="merge3.jpg" as="image" type="image/jpeg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" as="style">
@@ -174,9 +182,9 @@
         "softwareVersion": "1.0",
         "releaseNotes": "Revolutionary AI image generation with superior text rendering capabilities",
         "screenshot": [
-            "/merge3.jpg",
-            "/bench.png",
-            "/aliyun.png"
+            "merge3.jpg",
+            "bench.png",
+            "aliyun.png"
         ],
         "featureList": [
             "Superior Text Rendering",
@@ -297,7 +305,38 @@
                     "@type": "Answer",
                     "text": "Yes, you can try Qwen-Image for free through Qwen Chat. Visit our demo section to explore its capabilities."
                 }
+            },
+            {
+                "@type": "Question",
+                "name": "Does Qwen 2.5 support video (imagenes generar)?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Qwen 2.5 can generate short videos and high‑quality frames. Users can schedule prompts and export to MP4 or GIF."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How to use Qwen to run agent?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Create tools (generation, search, storage), connect them to Qwen for planning and tool-calling, then run iterative loops to accomplish multi-step tasks automatically."
+                }
             }
+        ]
+    }
+    </script>
+
+    <!-- HowTo: Use Qwen to run agent -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "Use Qwen to run agent",
+        "description": "Set up an agent with Qwen to plan, call tools, and generate images/videos.",
+        "step": [
+            {"@type": "HowToStep", "name": "Prepare tools", "text": "Define generation, search, and storage tools with safe parameters."},
+            {"@type": "HowToStep", "name": "Configure agent", "text": "Enable planning and tool-calling; provide system rules and goals."},
+            {"@type": "HowToStep", "name": "Run & iterate", "text": "Execute the task; the agent refines outputs until success."}
         ]
     }
     </script>
@@ -317,6 +356,7 @@
                 <li><a href="#features">Features</a></li>
                 <li><a href="#performance">Performance</a></li>
                 <li><a href="#demo">Demo</a></li>
+                <li><a href="video-agent.html">Video & Agent</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="help.html">Help</a></li>
                 <li><a href="blog.html">Blog</a></li>
@@ -328,7 +368,7 @@
     <section id="home" class="hero-fullscreen">
         <!-- Background Image with Overlay -->
         <div class="hero-background">
-            <img src="/merge3.jpg" alt="Qwen-Image AI Showcase" class="hero-bg-image">
+            <img src="merge3.jpg" alt="Qwen-Image AI Showcase" class="hero-bg-image" fetchpriority="high" decoding="async">
             <div class="hero-overlay-dark"></div>
         </div>
         
@@ -358,17 +398,61 @@
             </p>
             
             <div class="hero-buttons-clean fade-in">
-                <a href="https://qwen.alibaba.com" target="_blank" class="btn-clean btn-primary-clean">
+                <a href="https://qwen.alibaba.com" target="_blank" rel="noopener noreferrer" class="btn-clean btn-primary-clean">
                     Try Qwen Chat
                 </a>
                 <a href="#gallery" class="btn-clean btn-secondary-clean">
                     Explore Gallery
+                </a>
+                <a href="video-agent.html" class="btn-clean btn-secondary-clean">
+                    Qwen 2.5 Video & Agent
                 </a>
             </div>
             
             <!-- Simple Scroll Indicator -->
             <div class="scroll-indicator-clean fade-in">
                 <div class="scroll-arrow-clean">↓</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Qwen 2.5 Video & Agent Section -->
+    <section id="video-agent" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title fade-in">Qwen 2.5 Video & Agent Workflows</h2>
+                <p class="section-subtitle fade-in">Showcasing <span class="badge">qwen 2.5 video</span> <span class="badge">imagenes generar</span> and how to <strong>use qwen to run agent</strong> for end‑to‑end automation.</p>
+                <div class="chips">
+                    <span class="badge">Agentic Workflows</span>
+                    <span class="badge">ComfyUI</span>
+                    <span class="badge">GGUF</span>
+                </div>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <h3>Qwen 2.5 Video Imagenes Generar</h3>
+                    <p>Generate short video clips and high‑fidelity frames using Qwen 2.5. The pipeline supports prompt scheduling, key‑frame guidance, and export to MP4/GIF. Ideal for marketing creatives and educational explainers.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <h3>Use Qwen to Run Agent</h3>
+                    <p>Build an agent that plans, calls tools, and iterates. Combine Qwen for reasoning with image/video generation to automate multi‑step tasks like asset creation, captioning, and publishing.</p>
+                    <ul>
+                        <li>Define tools (generation, search, storage)</li>
+                        <li>Let the agent plan and call tools with guardrails</li>
+                        <li>Review results; the agent refines outputs automatically</li>
+                    </ul>
+                    <pre><code># use qwen to run agent (pseudo)
+goal: generar imagenes y video con qwen 2.5
+tools: [image.generate, video.generate, search]
+plan -&gt; call tools -&gt; review -&gt; iterate -&gt; publish
+</code></pre>
+                </div>
+                <div class="feature-card fade-in">
+                    <h3>Preview Player</h3>
+                    <div style="position:relative;padding-top:56.25%;border-radius:10px;overflow:hidden;box-shadow:0 8px 22px rgba(0,0,0,.15)">
+                        <iframe src="https://www.youtube.com/embed/9LgZ6Hx8HYQ" title="Qwen 2.5 Video Preview" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -384,7 +468,7 @@
             <div class="image-grid">
                 <!-- Comprehensive Showcase -->
                 <div class="image-card fade-in" itemscope itemtype="https://schema.org/ImageObject">
-                    <img src="/merge3.jpg" 
+                    <img src="merge3.jpg" loading="lazy" decoding="async"
                          alt="Qwen-Image AI comprehensive showcase featuring diverse qwen image comfyui capabilities including anime styles, wan2.2 text rendering, and qwen image gguf creative applications" 
                          title="Qwen-Image Comprehensive AI Capabilities Showcase"
                          itemprop="contentUrl" />
@@ -396,7 +480,7 @@
 
                 <!-- Performance Benchmarks -->
                 <div class="image-card fade-in" itemscope itemtype="https://schema.org/ImageObject">
-                    <img src="/bench.png" 
+                    <img src="bench.png" loading="lazy" decoding="async"
                          alt="Qwen-Image performance benchmark results showing superior scores in image generation, editing, Chinese rendering, and English rendering compared to competitors" 
                          title="Qwen-Image Performance Benchmark Excellence"
                          itemprop="contentUrl" />
@@ -408,7 +492,7 @@
 
                 <!-- Ancient Chinese Street -->
                 <div class="image-card fade-in" itemscope itemtype="https://schema.org/ImageObject">
-                    <img src="/aliyun.png" 
+                    <img src="aliyun.png" loading="lazy" decoding="async"
                          alt="Miyazaki anime style ancient Chinese street scene with perfect Chinese text rendering including shop signs for cloud storage, cloud computing, and AI models" 
                          title="Chinese Text Rendering in Miyazaki Anime Style"
                          itemprop="contentUrl" />
@@ -420,7 +504,7 @@
 
                 <!-- Traditional Study Room -->
                 <div class="image-card fade-in" itemscope itemtype="https://schema.org/ImageObject">
-                    <img src="/tongyi.png" 
+                    <img src="tongyi.png" loading="lazy" decoding="async"
                          alt="Traditional Chinese study room with elegant calligraphy scrolls, blue and white porcelain, classical furniture, and authentic cultural atmosphere" 
                          title="Classical Chinese Calligraphy and Interior Design"
                          itemprop="contentUrl" />
@@ -432,7 +516,7 @@
 
                 <!-- Bookstore Scene -->
                 <div class="image-card fade-in" itemscope itemtype="https://schema.org/ImageObject">
-                    <img src="/book.png" 
+                    <img src="book.png" loading="lazy" decoding="async"
                          alt="Bookstore window display with accurate English text rendering including 'New Arrivals This Week', 'Best-Selling Novels Here' and specific book titles" 
                          title="English Text Precision in Bookstore Setting"
                          itemprop="contentUrl" />
@@ -444,7 +528,7 @@
 
                 <!-- Moonlight Poetry -->
                 <div class="image-card fade-in" itemscope itemtype="https://schema.org/ImageObject">
-                    <img src="/small.png" 
+                    <img src="small.png" loading="lazy" decoding="async"
                          alt="Atmospheric moonlight scene with man in suit reading handwritten poetry by window, featuring a cat on windowsill and detailed text rendering" 
                          title="Poetic Moonlight Scene with Handwritten Text"
                          itemprop="contentUrl" />
@@ -456,7 +540,7 @@
 
                 <!-- Chinese Presenter -->
                 <div class="image-card fade-in" itemscope itemtype="https://schema.org/ImageObject">
-                    <img src="/s2.jpg" 
+                    <img src="s2.jpg" loading="lazy" decoding="async"
                          alt="Professional Chinese woman in QWEN t-shirt presenting with detailed Chinese text on glass board covering technical features and capabilities" 
                          title="Professional Chinese Business Presentation"
                          itemprop="contentUrl" />
@@ -468,7 +552,7 @@
 
                 <!-- Bilingual Presenter -->
                 <div class="image-card fade-in" itemscope itemtype="https://schema.org/ImageObject">
-                    <img src="/bi.png" 
+                    <img src="bi.png" loading="lazy" decoding="async"
                          alt="Bilingual QWEN presentation featuring seamless English-Chinese text integration on professional glass board with presenter" 
                          title="Bilingual English-Chinese Presentation Excellence"
                          itemprop="contentUrl" />
@@ -480,7 +564,7 @@
 
                 <!-- Creative Poster -->
                 <div class="image-card fade-in" itemscope itemtype="https://schema.org/ImageObject">
-                    <img src="/s3.jpg" 
+                    <img src="s3.jpg" loading="lazy" decoding="async"
                          alt="Imagination Unleashed movie poster with complex typography, futuristic computer graphics, and professional cinematic design elements" 
                          title="Creative Movie Poster with Complex Typography"
                          itemprop="contentUrl" />
@@ -639,7 +723,7 @@
         <div class="container">
             <h2 class="fade-in">Ready to Transform Your Creative Process?</h2>
             <p class="fade-in">Join thousands of creators using Qwen-Image to bring their visions to life with unprecedented quality and precision</p>
-            <a href="https://qwen.alibaba.com" target="_blank" class="btn btn-primary fade-in">Get Started Today</a>
+                <a href="https://qwen.alibaba.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary fade-in">Get Started Today</a>
         </div>
     </section>
 
